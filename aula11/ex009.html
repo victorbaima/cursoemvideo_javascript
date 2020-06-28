@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMIGRAÇÃO</title>
+    <style>
+        body{
+            font: normal 30pt Arial;
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+        input{
+            font: normal 20pt Arial;
+            color: black
+            width: 70px;
+
+        }
+        div#status{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>IMIGRAÇÃO</h1>
+    Informe sua nacionalidade:
+    <p> <input type="text" name="txtpais" id="txtpais"></p>
+    <p><input type="button" value="verificar" onclick="consultar()"></p>
+    <div id="status">
+
+    </div>
+<script>
+    function consultar(){
+        var txtnac = window.document.querySelector('input#txtpais')
+        var status = window.document.querySelector('div#status')
+        var pais = txtnac.value
+        if (pais != "Brasileiro"){
+            status.innerHTML = '<p>You are a foreigner, please provide documentation on immigration!</p>'
+        }
+        else{
+            status.innerHTML = '<p>Você é Brasileiro, seja bem vindo de volta!</p>'
+        }
+    }
+    
+</script>
+</body>
+</html>
