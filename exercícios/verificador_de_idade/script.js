@@ -9,7 +9,7 @@ function verificar() {
        var fsex = document.getElementsByName('radsex')
        var idade = ano - Number(fano.value)
        var gênero = ''
-       var img = document.createElement('img')
+       var img = document.createElement('img')                  // IMAGENS BAIXADAS DO SITE https://www.pexels.com/pt-br/procurar/portugu%C3%AAs/
        img.setAttribute('id', 'foto')
        if (fsex[0].checked){
            gênero = 'Homem'
